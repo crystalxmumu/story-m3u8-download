@@ -31,17 +31,20 @@ import static top.todev.story.download.constant.KaiShuStoryConstant.*;
 @Slf4j
 public class KaiShuStoryDownloadTest {
 
+    // 2388 汪汪队立大功 不能全部试听
+    // 1158 西游记 分页获取分集
+    // 1218 神奇图书馆
+    // 1772 神奇图书馆2
     private int[] productIds = new int[]{1772};
 
     private String saveDir = "E:\\story";
 
     @Test
-    public void testDownload() {
+    public void testDownload() throws InterruptedException {
         Security.addProvider(new BouncyCastleProvider());
         Arrays.stream(productIds)
                 .forEach(
                         id -> {
-                            AtomicInteger index = new AtomicInteger();
                             ProductResult productInfo = getProductInfo(id);
 //                            log.info("商品信息：{}", productInfo);
                             try {
@@ -50,20 +53,22 @@ public class KaiShuStoryDownloadTest {
                                 productInfo.getResult()
                                         .getModulelistvalue()
                                         .forEach(products -> {
+                                            AtomicInteger index = new AtomicInteger();
+                                            String cd = dir + File.separator + products.getModuleid();
                                             products.getList()
                                                     .forEach(product -> {
                                                         ItemResult itemInfo = getItemInfo(id, product.getStoryid());
                                                         String sd = NumberUtil.decimalFormat("000", index.incrementAndGet());
                                                         downloadStory(itemInfo.getResult().getSecrecyUrl(),
-                                                                dir  + File.separator + sd,
+                                                                cd  + File.separator + sd,
                                                                 StrUtil.format(NAME_STORY,
                                                                         sd,
                                                                         product.getStoryname()));
-                                                        /*try {
-                                                            Thread.sleep(5_000);
+                                                        try {
+                                                            Thread.sleep(800);
                                                         } catch (InterruptedException e) {
                                                             e.printStackTrace();
-                                                        }*/
+                                                        }
                                                     });
                                         });
                             } catch (IOException e) {
@@ -71,6 +76,7 @@ public class KaiShuStoryDownloadTest {
                             }
                         }
                 );
+        Thread.sleep(20_000);
     }
 
     private void downloadStory(String url, String dir, String name) {
