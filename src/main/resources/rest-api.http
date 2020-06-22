@@ -1,0 +1,105 @@
+GET https://m.kaishustory.com/api/product/detail/storylist?page_no=1&page_size=10&productid=1772&userid=134620772
+Host: m.kaishustory.com
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/12.0 Mobile/15A372 Safari/604.1
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+clientform: h5
+device: h5
+appid: 992099001
+appversion: 6.7.0
+usersource: kaishu
+platform: kaishu
+deviceid: 3A52CFCF713417915AE93DBBF2FF9CA1
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTIwOTkwMDEiLCJpbCI6ZmFsc2UsImlzcyI6ImthaXNodXN0b3J5IiwiZXhwIjoyNTYwNjcwMzQyLCJ1ZCI6MTM0NjIwNzcyfQ.c2WwCBGGCNOliIcQHxByB0sQdloo-_EKy33juKymuKs
+channelid: ks
+userid: 134620772
+mccCode:
+Connection: keep-alive
+Referer: https://m.kaishustory.com/detailPage?id=1772
+Cookie: Hm_lvt_6948e8470bbb2c5bcd23f59ac5f5d64d=1592639247; source=/#detailPage; acw_tc=2760777715928168809107224e5fe782cb20cb5b83f22d8f7e9bab370d9907
+
+<> 2020-06-22T054357.200.json
+<> 2020-06-22T053959.200.json
+
+###
+
+GET https://m.kaishustory.com/api/product/detail/storylist?page_no=2&page_size=10&productid=1158&userid=134620772
+Host: m.kaishustory.com
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/12.0 Mobile/15A372 Safari/604.1
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+clientform: h5
+device: h5
+appid: 992099001
+appversion: 6.7.0
+usersource: kaishu
+platform: kaishu
+deviceid: 3A52CFCF713417915AE93DBBF2FF9CA1
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTIwOTkwMDEiLCJpbCI6ZmFsc2UsImlzcyI6ImthaXNodXN0b3J5IiwiZXhwIjoyNTYwNjcwMzQyLCJ1ZCI6MTM0NjIwNzcyfQ.c2WwCBGGCNOliIcQHxByB0sQdloo-_EKy33juKymuKs
+channelid: ks
+userid: 134620772
+mccCode:
+Connection: keep-alive
+Referer: https://m.kaishustory.com/detailPage?id=1158
+Cookie: Hm_lvt_6948e8470bbb2c5bcd23f59ac5f5d64d=1592639247; source=/#detailPage; acw_tc=2760775d15928189029677184ee35c6c28ebb5b7b49fdf4d5b853c6bb0cd96
+
+<> 2020-06-22T054850.200.json
+
+###
+
+GET https://m.kaishustory.com/api/hls/key/h5MtsHlsUriToken/get?userId=134620772&contentId=116313&contentType=story&deviceId=3A52CFCF713417915AE93DBBF2FF9CA1&isSecrecy=1&productId=1772&albumId=
+Host: m.kaishustory.com
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/12.0 Mobile/15A372 Safari/604.1
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+clientform: h5
+device: h5
+appid: 992099001
+appversion: 6.7.0
+usersource: kaishu
+platform: kaishu
+deviceid: 3A52CFCF713417915AE93DBBF2FF9CA1
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTIwOTkwMDEiLCJpbCI6ZmFsc2UsImlzcyI6ImthaXNodXN0b3J5IiwiZXhwIjoyNTYwNjcwMzQyLCJ1ZCI6MTM0NjIwNzcyfQ.c2WwCBGGCNOliIcQHxByB0sQdloo-_EKy33juKymuKs
+channelid: ks
+userid: 134620772
+mccCode:
+Connection: keep-alive
+Referer: https://m.kaishustory.com/player?id=116313&type=7&productId=1772&pageSize=10&pageNo=1&contentType=3&moduleIndex=3
+Cookie: Hm_lvt_6948e8470bbb2c5bcd23f59ac5f5d64d=1592639247; source=detailPage#player; acw_tc=2760775d15928189029677184ee35c6c28ebb5b7b49fdf4d5b853c6bb0cd96
+
+<> 2020-06-22T054357-1.200.json
+<> 2020-06-22T054250.200.json
+
+###
+
+GET https://m.kaishustory.com/api/hls/key/h5MtsHlsUriToken/get?userId=134620772&contentId=100334&contentType=story&deviceId=3A52CFCF713417915AE93DBBF2FF9CA1&isSecrecy=1&productId=1158&albumId=
+Host: m.kaishustory.com
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/12.0 Mobile/15A372 Safari/604.1
+Accept: */*
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/json
+clientform: h5
+device: h5
+appid: 992099001
+appversion: 6.7.0
+usersource: kaishu
+platform: kaishu
+deviceid: 3A52CFCF713417915AE93DBBF2FF9CA1
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5OTIwOTkwMDEiLCJpbCI6ZmFsc2UsImlzcyI6ImthaXNodXN0b3J5IiwiZXhwIjoyNTYwNjcwMzQyLCJ1ZCI6MTM0NjIwNzcyfQ.c2WwCBGGCNOliIcQHxByB0sQdloo-_EKy33juKymuKs
+channelid: ks
+userid: 134620772
+mccCode:
+Connection: keep-alive
+Referer: https://m.kaishustory.com/player?id=100334&type=7&productId=1158&pageSize=10&pageNo=1&contentType=1&moduleIndex=
+Cookie: Hm_lvt_6948e8470bbb2c5bcd23f59ac5f5d64d=1592639247; source=detailPage#player; acw_tc=2760775d15928189029677184ee35c6c28ebb5b7b49fdf4d5b853c6bb0cd96
+
+<> 2020-06-22T055933.200.json
+
+###
