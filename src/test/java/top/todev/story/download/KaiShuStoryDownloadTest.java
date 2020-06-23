@@ -5,15 +5,12 @@ import cn.hutool.core.util.NumberUtil;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.http.Header;
 import cn.hutool.http.HttpRequest;
-import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.junit.jupiter.api.Test;
-import org.springframework.test.context.event.annotation.BeforeTestMethod;
 import top.todev.story.download.data.item.ItemResult;
 import top.todev.story.download.data.product.ProductResult;
-import top.todev.story.download.data.product.ResultBean;
 import top.todev.story.download.m3u8.download.M3u8DownloadFactory;
 import top.todev.story.download.m3u8.listener.DownloadListener;
 import top.todev.story.download.m3u8.utils.Constant;
@@ -77,6 +74,12 @@ public class KaiShuStoryDownloadTest {
                         }
                 );
         Thread.sleep(20_000);
+    }
+
+    @Test
+    public void testGetStory() {
+        ItemResult itemInfo = getItemInfo(2388, 104563);
+        log.info("故事信息：{}", itemInfo);
     }
 
     private void downloadStory(String url, String dir, String name) {
