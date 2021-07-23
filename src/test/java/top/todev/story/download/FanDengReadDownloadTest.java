@@ -36,6 +36,32 @@ public class FanDengReadDownloadTest {
         Thread.sleep(50_000);
     }
 
+    @Test
+    public void testDownload3() throws InterruptedException {
+        String url = "https://cdn-ali-dest.dushu365.com/media/video/1589958477cda8faed2d10304c8b2cf3bfc4eb5698e2gcnm/2/playlist.m3u8";
+        String name = "授权-如何激发全员领导力";
+        downloadStory(url, saveDir, name);
+
+        Thread.sleep(50_000);
+    }
+
+    @Test
+    public void testDownload4() throws InterruptedException {
+        String url = "https://cdn-ali-dest.dushu365.com/media/video/1603774961cd102209e83408d9177fc80aa1d907fb4vkb12/2/playlist.m3u8";
+        String name = "逆商";
+        downloadStory(url, saveDir, name);
+
+        Thread.sleep(50_000);
+    }
+
+    @Test
+    public void testDownload5() throws InterruptedException {
+        String url = "https://cdn-tencent-dest.dushu365.com/media/video/1618466320231f24dd26d5379634298771448b8907g8xhi3/2/playlist.m3u8";
+        String name = "一平方米的静心";
+        downloadStory(url, saveDir, name);
+
+        Thread.sleep(50_000);
+    }
 
     private void downloadStory(String url, String dir, String name) {
         M3u8DownloadFactory.M3u8Download m3u8Download = new M3u8DownloadFactory.M3u8Download(url);
