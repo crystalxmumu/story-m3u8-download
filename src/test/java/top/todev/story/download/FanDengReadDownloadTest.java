@@ -72,6 +72,15 @@ public class FanDengReadDownloadTest {
         Thread.sleep(50_000);
     }
 
+    @Test
+    public void testDownload7() throws InterruptedException {
+        String url = "https://cdn-upyun-dest.dushu365.com/media/video/1619403762bbe6309d85d8bc5005fcbacf3fbcf5c7yrcd1u/2/playlist.m3u8";
+        String name = "深度工作";
+        downloadStory(url, saveDir, name);
+
+        Thread.sleep(50_000);
+    }
+
     private void downloadStory(String url, String dir, String name) {
         M3u8DownloadFactory.M3u8Download m3u8Download = new M3u8DownloadFactory.M3u8Download(url);
         //设置生成目录
