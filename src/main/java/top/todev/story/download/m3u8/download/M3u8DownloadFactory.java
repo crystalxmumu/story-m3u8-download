@@ -1,5 +1,6 @@
 package top.todev.story.download.m3u8.download;
 
+import cn.hutool.core.util.URLUtil;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import top.todev.story.download.m3u8.Exception.M3u8Exception;
 import top.todev.story.download.m3u8.listener.DownloadListener;
@@ -406,12 +407,21 @@ public class M3u8DownloadFactory {
                 }
             }
             String relativeUrl = url.substring(0, url.lastIndexOf("/") + 1);
+            String host = URLUtil.getHost(URLUtil.url(DOWNLOADURL)).toString();
             //将ts片段链接加入set集合
             for (int i = 0; i < split.length; i++) {
                 String s = split[i];
                 if (s.contains("#EXTINF")) {
                     String s1 = split[++i];
-                    tsSet.add(StringUtils.isUrl(s1) ? s1 : mergeUrl(relativeUrl, s1));
+                    if (StringUtils.isUrl(s1)) {
+                        tsSet.add(s1);
+                    } else if (s1.startsWith("/")) {
+                        tsSet.add(mergeUrl(host + "/", s1));
+                    } else {
+                        tsSet.add(mergeUrl(relativeUrl, s1));
+                    }
+                    // 2023.04.25 注释，取根目录下路径
+                    //tsSet.add(StringUtils.isUrl(s1) ? s1 : mergeUrl(relativeUrl, s1));
                 }
             }
             if (!StringUtils.isEmpty(key)) {

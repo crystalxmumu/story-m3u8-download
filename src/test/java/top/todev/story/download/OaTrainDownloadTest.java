@@ -1,5 +1,6 @@
 package top.todev.story.download;
 
+import cn.hutool.core.util.URLUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import top.todev.story.download.m3u8.download.M3u8DownloadFactory;
@@ -7,7 +8,7 @@ import top.todev.story.download.m3u8.listener.DownloadListener;
 import top.todev.story.download.m3u8.utils.Constant;
 
 /**
- * <p>樊登读书下载</p>
+ * <p>OA培训下载</p>
  *
  * @author 小飞猪
  * @version 0.0.1
@@ -15,22 +16,22 @@ import top.todev.story.download.m3u8.utils.Constant;
  * @since 0.0.1
  */
 @Slf4j
-public class FanDengReadDownloadTest {
+public class OaTrainDownloadTest {
 
-    private final String saveDir = "E:\\read";
+    private final String saveDir = "E:\\oa\\train";
 
     @Test
     public void testDownload1() throws InterruptedException {
-        String url1 = "https://cdn-ali-dest.dushu365.com/media/video/1593999789ebbb0823109fb9676446dfd3fec13be44chpkj/2/playlist.m3u8";
-        String name1 = "一生的旅程";
+        String url1 = "https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/8877e708/20210423104544_8877e708/record.m3u8?token=323CC2F3_ODIxMzY5Nzc4XzY0NTBENTkzX09EZzNOMlUzTURnX2RtbHphWFJmTnpnM016ZzJPVFExX3ZvZA";
+        String name1 = "Ecology9.0表单建模二次开发培训";
         downloadStory(url1, saveDir, name1);
 
         Thread.sleep(200_000);
     }
     @Test
     public void testDownload2() throws InterruptedException {
-        String url2 = "https://cdn-ali-dest.dushu365.com/media/video/161156668304b685baf7a1ea0bbe34c3a2936329975y7o3v/2/playlist.m3u8";
-        String name2 = "这才是心理学";
+        String url2 = "https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/74e01e9c/20211122163340_74e01e9c/record.m3u8?token=C3699052_MjE1OTYxOTc3XzY0NTBERTk4X056UmxNREZsT1dNX2RtbHphWFJmTnpnM016ZzJPVFExX3ZvZA";
+        String name2 = "[E9]办公用品管理应用场景培训(云平台)";
         downloadStory(url2, saveDir, name2);
 
         Thread.sleep(50_000);
@@ -38,57 +39,20 @@ public class FanDengReadDownloadTest {
 
     @Test
     public void testDownload3() throws InterruptedException {
-        String url = "https://cdn-ali-dest.dushu365.com/media/video/1589958477cda8faed2d10304c8b2cf3bfc4eb5698e2gcnm/2/playlist.m3u8";
-        String name = "授权-如何激发全员领导力";
-        downloadStory(url, saveDir, name);
+        String url2 = "https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/678de50b/20210730094840_678de50b/record.m3u8?token=B06A624A_MjI1ODg1MTQzXzY0NTBFMDI4X05qYzRaR1UxTUdJX2RtbHphWFJmTnpnM016ZzJPVFExX3ZvZA";
+        String name2 = "[E9]采购管理应用场景";
+        downloadStory(url2, saveDir, name2);
 
-        Thread.sleep(50_000);
+        Thread.sleep(120_000);
     }
 
     @Test
-    public void testDownload4() throws InterruptedException {
-        String url = "https://cdn-ali-dest.dushu365.com/media/video/1603774961cd102209e83408d9177fc80aa1d907fb4vkb12/2/playlist.m3u8";
-        String name = "逆商";
-        downloadStory(url, saveDir, name);
-
-        Thread.sleep(50_000);
+    public void testUrlHost() {
+        String url = "https://tehlsvodhls02.vhallyun.com/vhallyun/vhallrecord/8877e708/20210423104544_8877e708/record.m3u8?token=323CC2F3_ODIxMzY5Nzc4XzY0NTBENTkzX09EZzNOMlUzTURnX2RtbHphWFJmTnpnM016ZzJPVFExX3ZvZA";
+        String host = URLUtil.getHost(URLUtil.url(url)).toString();
+        log.info("URL-host: {}", host);
     }
 
-    @Test
-    public void testDownload5() throws InterruptedException {
-        String url = "https://cdn-tencent-dest.dushu365.com/media/video/1618466320231f24dd26d5379634298771448b8907g8xhi3/2/playlist.m3u8";
-        String name = "一平方米的静心";
-        downloadStory(url, saveDir, name);
-
-        Thread.sleep(50_000);
-    }
-
-    @Test
-    public void testDownload6() throws InterruptedException {
-        String url = "https://cdn-ali-dest.dushu365.com/media/video/1610595845c30756ffc072bbcbf4c1c6b8fbb55690ppvvt4/2/playlist.m3u8";
-        String name = "关键对话";
-        downloadStory(url, saveDir, name);
-
-        Thread.sleep(50_000);
-    }
-
-    @Test
-    public void testDownload7() throws InterruptedException {
-        String url = "https://cdn-upyun-dest.dushu365.com/media/video/1619403762bbe6309d85d8bc5005fcbacf3fbcf5c7yrcd1u/2/playlist.m3u8";
-        String name = "深度工作";
-        downloadStory(url, saveDir, name);
-
-        Thread.sleep(50_000);
-    }
-
-    @Test
-    public void testDownload8() throws InterruptedException {
-        String url = "https://cdn-upyun-dest.dushu365.com/media/video/1574927671125f67e2795774abba71fd6a83408faabxgbn2/2/playlist.m3u8";
-        String name = "责任病毒";
-        downloadStory(url, saveDir, name);
-
-        Thread.sleep(50_000);
-    }
 
     private void downloadStory(String url, String dir, String name) {
         M3u8DownloadFactory.M3u8Download m3u8Download = new M3u8DownloadFactory.M3u8Download(url);
